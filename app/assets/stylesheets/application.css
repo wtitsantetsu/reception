@@ -1,0 +1,484 @@
+@import "reset.css";
+
+/*============================
+
+common
+
+=============================*/
+html {
+  font-size: 10px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: break-word;
+}
+
+body {
+  -webkit-font-feature-settings: “palt”;
+          font-feature-settings: “palt”;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+body,
+section,
+article,
+header,
+footer {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  margin-top: 8rem;
+}
+
+.btn {
+  padding: 2rem 4rem;
+  border-radius: 100px;
+  background-color: #ddd;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}
+.btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+main h2 {
+  font-size: 2.8rem;
+  margin: 0 0 2rem;
+}
+
+/*============================
+
+All Pages main layout
+
+=============================*/
+.l-main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l-main .side-menu {
+  width: 200px;
+  min-height: calc(100vh - 8rem);
+  position: fixed;
+}
+.l-main .side-menu nav {
+  padding: 2rem 0;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: calc(100vh - 8rem);
+}
+.l-main .side-menu nav ul {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.l-main .side-menu nav ul li a {
+  padding: 1rem 2rem;
+  display: block;
+}
+.l-main .side-menu nav ul li a:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.l-main .side-menu nav p {
+  padding-left: 2rem;
+}
+.l-main .contents {
+  width: 100%;
+  min-height: calc(100vh - 8rem);
+  padding: 4rem 0 0 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.l-main .contents .inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 4rem;
+}
+
+/*============================
+
+table layout
+
+=============================*/
+.contents table {
+  width: 100%;
+}
+.contents table thead {
+  width: 100%;
+  height: 5rem;
+}
+.contents table tr th {
+  padding: 1.4rem 0.8rem;
+}
+.contents table tr th:first-of-type {
+  width: 18%;
+}
+.contents table tr th:nth-of-type(2) {
+  width: 28%;
+}
+.contents table tr th:nth-of-type(3) {
+  width: calc(54% - 10rem);
+}
+.contents table tr th:nth-of-type(4) {
+  width: 10rem;
+}
+.contents table tr td {
+  padding: 1.4rem 0.8rem;
+}
+.contents table tr td:first-of-type {
+  width: 18%;
+}
+.contents table tr td:nth-of-type(2) {
+  width: 28%;
+}
+.contents table tr td:nth-of-type(3) {
+  width: calc(54% - 10rem);
+}
+.contents table tr td:nth-of-type(4) {
+  width: 10rem;
+}
+
+/*============================
+
+Header
+
+=============================*/
+header {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 700;
+  border-bottom: 1px solid #D9DADF;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+header .header-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4.8rem 0 2rem;
+}
+header .header-wrapper h1 {
+  width: 10rem;
+}
+header .header-wrapper > div {
+  margin: 0 0 0 auto;
+}
+
+/*============================
+
+Footer
+
+=============================*/
+footer .copyright {
+  font-size: 1.2rem;
+  padding: 0 4rem;
+  line-height: 5rem;
+  text-align: end;
+}
+
+/*============================
+
+（TOP）dashboard
+
+=============================*/
+.top_dashboard ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+  padding-bottom: 4rem;
+}
+.top_dashboard ul li {
+  width: calc((100% - 4rem) / 2);
+}
+.top_dashboard ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background-color: #ddd;
+}
+.top_dashboard ul li a:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/*============================
+
+user archives
+
+=============================*/
+.user-archives .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 2rem;
+}
+.user-archives .wrap h2 {
+  margin: 0;
+}
+.user-archives .wrap div {
+  margin: 0 0 0 auto;
+}
+
+/*============================
+
+user add new
+
+=============================*/
+.user-new form div {
+  max-width: 80%;
+}
+.user-new form div table {
+  width: 100%;
+  margin: 0 0 2rem;
+}
+.user-new form div table tr th {
+  font-weight: 400;
+  padding-bottom: 0.4rem;
+  padding-right: 2rem;
+}
+.user-new form div table tr th span {
+  padding-left: 1.6rem;
+  color: red;
+  border-radius: 5px;
+}
+.user-new form div table tr td {
+  padding: 0 0 2rem;
+  padding-right: 2rem;
+}
+.user-new form div table tr td input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+}
+.user-new form div table tr td input:focus {
+  outline: none;
+  border-color: #000;
+}
+.user-new form .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.user-new form .wrap .btn {
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*============================
+
+visitor archives
+
+=============================*/
+.visitor-archives .visitor-list tr th:first-of-type {
+  width: 14rem;
+}
+.visitor-archives .visitor-list tr th:nth-of-type(2) {
+  width: 20%;
+}
+.visitor-archives .visitor-list tr th:nth-of-type(3) {
+  width: calc(100% - 14rem - 20% - 20%);
+}
+.visitor-archives .visitor-list tr th:nth-of-type(4) {
+  width: 20%;
+}
+.visitor-archives .visitor-list tr td:first-of-type {
+  width: 14rem;
+}
+.visitor-archives .visitor-list tr td:nth-of-type(2) {
+  width: 20%;
+}
+.visitor-archives .visitor-list tr td:nth-of-type(3) {
+  width: calc(100% - 14rem - 20% - 20%);
+}
+.visitor-archives .visitor-list tr td:nth-of-type(4) {
+  width: 20%;
+}
+.visitor-archives .visitor-list tr td span {
+  display: block;
+  font-size: 1.4rem;
+}
+
+/*============================
+
+log in
+
+=============================*/
+.page--login main {
+  min-height: calc(100vh - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page--login main section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.login {
+  padding: 8rem 0;
+}
+.login .inner {
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.login h2 {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 4rem;
+}
+.login form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.login .wrap {
+  margin: 0 0 4.6rem;
+}
+.login table {
+  width: 100%;
+}
+.login table tr th {
+  width: 100%;
+  padding: 0 0 0.4rem;
+}
+.login table tr td {
+  width: 100%;
+  padding: 0 0 2.4rem;
+}
+.login table tr td input {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.login table tr td input:focus {
+  outline: none;
+  border-color: #000;
+}
+.login table tr td:last-of-type {
+  padding: 0 0 1rem;
+}
+.login p {
+  text-align: end;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  font-size: 1.2rem;
+}
+.login .btn {
+  padding: 0;
+}
+.login .btn input {
+  padding: 2rem 4rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/*============================
+
+account
+
+=============================*/
+.account table tr th:first-of-type {
+  width: 16rem;
+}
+.account table tr td:first-of-type {
+  width: calc(100% - 16rem - 12rem);
+}
+.account table tr td:nth-of-type(2) {
+  width: 12rem;
+  padding: 1.4rem 0 0;
+}
+.account table tr td:nth-of-type(2) a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 2.5rem;
+  border: 1px solid #ddd;
+  padding: 1rem 0.4rem;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+.account table tr td:nth-of-type(2) a:hover {
+  border-color: #000;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=master.css.map */

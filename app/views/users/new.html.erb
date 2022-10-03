@@ -1,0 +1,49 @@
+<section class="contents user-new">
+  <div class="inner">
+    <h2>ユーザー情報</h2>
+    <%= form_tag("/users/create") do %>
+      <div>
+        <table>
+          <tr>
+            <th>ユーザー名(英字可) </th>
+            <th>ユーザー名(カナ) </th>
+          </tr>
+          <tr>
+            <td><input name="name" type="text" placeholder="ユーザー名"></td>
+            <td><input name="name_kana" type="text" placeholder="ユーザーメイ"></td>
+          </tr>
+          <tr>
+            <th>会社名 </th>
+            <th>会社名(カナ) </th>
+          </tr>
+          <tr>
+            <td><input name="company" type="text" placeholder="会社名"></td>
+            <td><input name="company_kana" type="text" placeholder="カイシャメイ"></td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <th>Slack ID<span>必須</span></th>
+          </tr>
+          <tr>
+            <td><input name="mail" type="email" placeholder="example@com"></td>
+            <td><input name="slack_id" type="text" placeholder="@slack"></td>
+          </tr>
+          <tr>
+            <th>部屋番号</th>
+          </tr>
+          <tr>
+            <td><input name="room_number" type="text" placeholder="部屋番号"></td>
+          </tr>
+        </table>
+        <div class="wrap">
+          <div><%= link_to "キャンセル", users_index_url, class:"btn" %></div>
+          <div><input class="btn" type="submit" value="登録する"></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+    <footer>
+      <p class="copyright">© 2022 Co.lab.inc</p>
+    </footer>
+  </section>
+</div>

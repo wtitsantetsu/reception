@@ -1,0 +1,49 @@
+<div class="l-main">
+    <aside class="side-menu">
+      <nav>
+        <ul>
+          <li><a href="index.html">ダッシュボード</a></li>
+          <li><a href="user.html">ユーザー管理</a></li>
+          <li><a href="visitor.html">来訪者履歴</a></li>
+        </ul>
+        <ul>
+          <li><a href="setting_chat.html">チャット設定</a></li>
+          <li><a href="setting_app.html">受付アプリ設定</a></li>
+          <li><a href="account.html">アカウント情報</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="contents user-archives">
+      <div class="inner">
+        <div class="wrap">
+          <h2>ユーザー</h2>
+          <div><%= link_to "ユーザーを登録", users_new_url, class:"btn" %></div>
+        </div>
+        <div class="user-list">
+          <table>
+            <thead>
+              <tr>
+                <th>名前</th>
+                <th>メールアドレス</th>
+                <th>会社名</th>
+                <th>部屋番号</th>
+              </tr>
+            </thead>
+            <% @users.each do |user|%>
+              <tbody>
+                <tr>
+                  <td><%= user.name %></td>
+                  <td><%= user.mail%></td>
+                  <td><%= user.company %></td>
+                  <td><%= user.room_number%></td>
+                </tr>
+              </tbody>
+            <% end %>
+          </table>
+        </div>
+      </div>
+      <footer>
+        <p class="copyright">© 2022 Co.lab.inc</p>
+      </footer>
+    </section>
+  </div>

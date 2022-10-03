@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+  <header>
+    <div class="header-wrapper">
+      <h1><a href="index.html"><%= image_tag 'logo.png' %></a></h1>
+      <div><a href="login.html">ログアウト</a></div>
+    </div>
+  </header>
+    <main>
+      <div class="l-main">
+        <aside class="side-menu">
+          <nav>
+            <ul>
+              <li><%= link_to "ダッシュボード", users_index_url %></li>
+              <li><%= link_to "ユーザー管理", users_index_url %></li>
+              <li><%= link_to "来訪者履歴", visiters_index_url %></li>
+            </ul>
+            <ul>
+              <li><a href="setting_chat.html">チャット設定</a></li>
+              <li><a href="setting_app.html">受付アプリ設定</a></li>
+              <li><a href="account.html">アカウント情報</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <%= yield %>
+    </main>
+  </body>
+</html>
